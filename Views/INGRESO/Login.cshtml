@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "LoginUsuario";
+}
+
+<h1>LoginUsuario</h1>
+@using (Html.BeginForm("LoginUsuario", "INGRESO", FormMethod.Post))
+{
+    <h2>Es con Form del HTML</h2>
+    <table>
+        <tr>
+            <td> Usuario:</td>
+            <td><input type="text" name="USUARIO" class="form-control" /></td>
+            @* @Html.TextBox("USUARIO") *@
+        </tr>
+        <tr>
+            <td>Clave:</td>
+            <td><input type="password" name="CLAVE" class="form-control" /></td>
+            @* @Html.Password("CLAVE") *@
+        </tr>
+        <tr>
+            <td><input type="submit" value="Aceptar" class="btn btn-info" /></td>
+            <td><input type="reset" value="Cancelar" class="btn btn-danger" /></td>
+        </tr>
+    </table>
+}
+
+<br />
+<div>
+    <p>
+        <h2>@ViewBag.MENSAJE</h2>
+    </p>
+</div>
